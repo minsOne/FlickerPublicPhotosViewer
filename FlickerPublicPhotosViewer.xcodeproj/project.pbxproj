@@ -112,8 +112,8 @@
 		CBB0537A21B3BE1E00BDDC2B /* API */ = {
 			isa = PBXGroup;
 			children = (
-				CBB0537B21B3BE1E00BDDC2B /* ServiceFeeds */,
 				CBB0537D21B3BE1E00BDDC2B /* API.swift */,
+				CBB0537B21B3BE1E00BDDC2B /* ServiceFeeds */,
 			);
 			path = API;
 			sourceTree = "<group>";
