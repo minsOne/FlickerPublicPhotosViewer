@@ -1,0 +1,12 @@
+name: FlickerPublicPhotosViewer
+options:
+  bundleIdPrefix: kr.minsone
+targets:
+  FlickerPublicPhotosViewer:
+    type: application
+    platform: iOS
+    deploymentTarget: "10.0"
+    settings:
+      configs:
+    dependencies:
+      - carthage: DifferenceKit
