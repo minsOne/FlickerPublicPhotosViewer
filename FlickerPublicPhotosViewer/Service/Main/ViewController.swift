@@ -19,6 +19,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        bindState()
+        bindView()
         reactor.action.onNext(.초기화)
     }
     
