@@ -1,0 +1,447 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BF_1923445AD035869013ECA67242F9435D /* DifferenceKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FR_89D3B039912CC6871139FE0619606076 /* DifferenceKit.framework */; };
+		CBB0538721B3BE1E00BDDC2B /* API+ServiceFeedsPhotosPublic.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB0537C21B3BE1E00BDDC2B /* API+ServiceFeedsPhotosPublic.swift */; };
+		CBB0538821B3BE1E00BDDC2B /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB0537D21B3BE1E00BDDC2B /* API.swift */; };
+		CBB0538921B3BE1E00BDDC2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB0537E21B3BE1E00BDDC2B /* AppDelegate.swift */; };
+		CBB0538A21B3BE1E00BDDC2B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB0538121B3BE1E00BDDC2B /* ViewController.swift */; };
+		CBB0538B21B3BE1E00BDDC2B /* MainBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB0538221B3BE1E00BDDC2B /* MainBuilder.swift */; };
+		CBB0538C21B3BE1E00BDDC2B /* MainReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB0538321B3BE1E00BDDC2B /* MainReactor.swift */; };
+		CBB0538D21B3BE3C00BDDC2B /* Main.storyboard in Sources */ = {isa = PBXBuildFile; fileRef = CBB0538421B3BE1E00BDDC2B /* Main.storyboard */; };
+		CBB0539321B3BFB300BDDC2B /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB0538E21B3BFB300BDDC2B /* RxCocoa.framework */; };
+		CBB0539421B3BFB300BDDC2B /* RxAtomic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB0538F21B3BFB300BDDC2B /* RxAtomic.framework */; };
+		CBB0539521B3BFB300BDDC2B /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB0539021B3BFB300BDDC2B /* RxSwift.framework */; };
+		CBB0539621B3BFB300BDDC2B /* XMLParsing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB0539121B3BFB300BDDC2B /* XMLParsing.framework */; };
+		CBB0539721B3BFB300BDDC2B /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB0539221B3BFB300BDDC2B /* RxBlocking.framework */; };
+		CBB0539921B3C19600BDDC2B /* ReactorKitRuntime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB0539821B3C19600BDDC2B /* ReactorKitRuntime.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CBB0537721B3BE1E00BDDC2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CBB0537921B3BE1E00BDDC2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CBB0537C21B3BE1E00BDDC2B /* API+ServiceFeedsPhotosPublic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "API+ServiceFeedsPhotosPublic.swift"; sourceTree = "<group>"; };
+		CBB0537D21B3BE1E00BDDC2B /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		CBB0537E21B3BE1E00BDDC2B /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CBB0538121B3BE1E00BDDC2B /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CBB0538221B3BE1E00BDDC2B /* MainBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainBuilder.swift; sourceTree = "<group>"; };
+		CBB0538321B3BE1E00BDDC2B /* MainReactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainReactor.swift; sourceTree = "<group>"; };
+		CBB0538521B3BE1E00BDDC2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CBB0538621B3BE1E00BDDC2B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBB0538E21B3BFB300BDDC2B /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxCocoa.framework; sourceTree = "<group>"; };
+		CBB0538F21B3BFB300BDDC2B /* RxAtomic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxAtomic.framework; sourceTree = "<group>"; };
+		CBB0539021B3BFB300BDDC2B /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxSwift.framework; sourceTree = "<group>"; };
+		CBB0539121B3BFB300BDDC2B /* XMLParsing.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = XMLParsing.framework; sourceTree = "<group>"; };
+		CBB0539221B3BFB300BDDC2B /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxBlocking.framework; sourceTree = "<group>"; };
+		CBB0539821B3C19600BDDC2B /* ReactorKitRuntime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ReactorKitRuntime.framework; sourceTree = "<group>"; };
+		FR_482C0ED4A8534EB16C4A04AFC55B178D /* FlickerPublicPhotosViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlickerPublicPhotosViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FR_89D3B039912CC6871139FE0619606076 /* DifferenceKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DifferenceKit.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FBP_F8D90736A6CDDF896256709AF7C229A2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBB0539521B3BFB300BDDC2B /* RxSwift.framework in Frameworks */,
+				CBB0539321B3BFB300BDDC2B /* RxCocoa.framework in Frameworks */,
+				CBB0539621B3BFB300BDDC2B /* XMLParsing.framework in Frameworks */,
+				BF_1923445AD035869013ECA67242F9435D /* DifferenceKit.framework in Frameworks */,
+				CBB0539421B3BFB300BDDC2B /* RxAtomic.framework in Frameworks */,
+				CBB0539721B3BFB300BDDC2B /* RxBlocking.framework in Frameworks */,
+				CBB0539921B3C19600BDDC2B /* ReactorKitRuntime.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CBB0537621B3BE1E00BDDC2B /* FlickerPublicPhotosViewer */ = {
+			isa = PBXGroup;
+			children = (
+				CBB0537721B3BE1E00BDDC2B /* Assets.xcassets */,
+				CBB0537821B3BE1E00BDDC2B /* LaunchScreen.storyboard */,
+				CBB0537A21B3BE1E00BDDC2B /* API */,
+				CBB0537E21B3BE1E00BDDC2B /* AppDelegate.swift */,
+				CBB0537F21B3BE1E00BDDC2B /* Service */,
+				CBB0538621B3BE1E00BDDC2B /* Info.plist */,
+			);
+			path = FlickerPublicPhotosViewer;
+			sourceTree = "<group>";
+		};
+		CBB0537A21B3BE1E00BDDC2B /* API */ = {
+			isa = PBXGroup;
+			children = (
+				CBB0537B21B3BE1E00BDDC2B /* ServiceFeeds */,
+				CBB0537D21B3BE1E00BDDC2B /* API.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		CBB0537B21B3BE1E00BDDC2B /* ServiceFeeds */ = {
+			isa = PBXGroup;
+			children = (
+				CBB0537C21B3BE1E00BDDC2B /* API+ServiceFeedsPhotosPublic.swift */,
+			);
+			path = ServiceFeeds;
+			sourceTree = "<group>";
+		};
+		CBB0537F21B3BE1E00BDDC2B /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				CBB0538021B3BE1E00BDDC2B /* Main */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		CBB0538021B3BE1E00BDDC2B /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				CBB0538121B3BE1E00BDDC2B /* ViewController.swift */,
+				CBB0538221B3BE1E00BDDC2B /* MainBuilder.swift */,
+				CBB0538321B3BE1E00BDDC2B /* MainReactor.swift */,
+				CBB0538421B3BE1E00BDDC2B /* Main.storyboard */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		G_2CA8084794685E43C19566A5FC6CDE02 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CBB0539821B3C19600BDDC2B /* ReactorKitRuntime.framework */,
+				CBB0538F21B3BFB300BDDC2B /* RxAtomic.framework */,
+				CBB0539221B3BFB300BDDC2B /* RxBlocking.framework */,
+				CBB0538E21B3BFB300BDDC2B /* RxCocoa.framework */,
+				CBB0539021B3BFB300BDDC2B /* RxSwift.framework */,
+				CBB0539121B3BFB300BDDC2B /* XMLParsing.framework */,
+				FR_89D3B039912CC6871139FE0619606076 /* DifferenceKit.framework */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		G_2E1A20FC3BB897F47052AC37A82317D5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				G_E0EDDF4D6A4C32D71D2E32D9E19B50D6 /* Carthage */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		G_4850CAC48C5308B1B8E927EAD9FF09FF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FR_482C0ED4A8534EB16C4A04AFC55B178D /* FlickerPublicPhotosViewer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		G_531F8652EE46C6AF552E8C891BACE54E = {
+			isa = PBXGroup;
+			children = (
+				CBB0537621B3BE1E00BDDC2B /* FlickerPublicPhotosViewer */,
+				G_2E1A20FC3BB897F47052AC37A82317D5 /* Frameworks */,
+				G_4850CAC48C5308B1B8E927EAD9FF09FF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		G_E0EDDF4D6A4C32D71D2E32D9E19B50D6 /* Carthage */ = {
+			isa = PBXGroup;
+			children = (
+				G_2CA8084794685E43C19566A5FC6CDE02 /* iOS */,
+			);
+			name = Carthage;
+			path = Carthage/Build;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		NT_4EB788E1E6ABE31148B6E8884BB86AC6 /* FlickerPublicPhotosViewer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CL_D104F7964012A11CD547EAE2AD3ED7A7 /* Build configuration list for PBXNativeTarget "FlickerPublicPhotosViewer" */;
+			buildPhases = (
+				SBP_8E12A80C8822168209744B7163C37A6F /* Sources */,
+				FBP_F8D90736A6CDDF896256709AF7C229A2 /* Frameworks */,
+				SSBP_05B511293BFEEDA895F506977478CF81 /* Carthage */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FlickerPublicPhotosViewer;
+			productName = FlickerPublicPhotosViewer;
+			productReference = FR_482C0ED4A8534EB16C4A04AFC55B178D /* FlickerPublicPhotosViewer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		P_D533BA5620A8B4C21FDE61778C8921F4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1000;
+			};
+			buildConfigurationList = CL_2ED09A0AB1F17364B198416E105B6AE8 /* Build configuration list for PBXProject "FlickerPublicPhotosViewer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = G_531F8652EE46C6AF552E8C891BACE54E;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				NT_4EB788E1E6ABE31148B6E8884BB86AC6 /* FlickerPublicPhotosViewer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		SSBP_05B511293BFEEDA895F506977478CF81 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/DifferenceKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxAtomic.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxBlocking.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/XMLParsing.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ReactorKitRuntime.framework",
+			);
+			name = Carthage;
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/DifferenceKit.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxAtomic.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxBlocking.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxCocoa.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/XMLParsing.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ReactorKitRuntime.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		SBP_8E12A80C8822168209744B7163C37A6F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBB0538D21B3BE3C00BDDC2B /* Main.storyboard in Sources */,
+				CBB0538921B3BE1E00BDDC2B /* AppDelegate.swift in Sources */,
+				CBB0538C21B3BE1E00BDDC2B /* MainReactor.swift in Sources */,
+				CBB0538821B3BE1E00BDDC2B /* API.swift in Sources */,
+				CBB0538A21B3BE1E00BDDC2B /* ViewController.swift in Sources */,
+				CBB0538721B3BE1E00BDDC2B /* API+ServiceFeedsPhotosPublic.swift in Sources */,
+				CBB0538B21B3BE1E00BDDC2B /* MainBuilder.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CBB0537821B3BE1E00BDDC2B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CBB0537921B3BE1E00BDDC2B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		CBB0538421B3BE1E00BDDC2B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CBB0538521B3BE1E00BDDC2B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BC_05C9CD361A574D214F3BCFA40589269B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/FlickerPublicPhotosViewer/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kr.minsone.FlickerPublicPhotosViewer;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BC_7A18FB6E8715781C39C200761B8C4F85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BC_AA6085B897E3792625CF42278DD3331C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/FlickerPublicPhotosViewer/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kr.minsone.FlickerPublicPhotosViewer;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BC_B53817E089642F2EF8AD83E736FCF7C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CL_2ED09A0AB1F17364B198416E105B6AE8 /* Build configuration list for PBXProject "FlickerPublicPhotosViewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC_B53817E089642F2EF8AD83E736FCF7C7 /* Debug */,
+				BC_7A18FB6E8715781C39C200761B8C4F85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		CL_D104F7964012A11CD547EAE2AD3ED7A7 /* Build configuration list for PBXNativeTarget "FlickerPublicPhotosViewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC_05C9CD361A574D214F3BCFA40589269B /* Debug */,
+				BC_AA6085B897E3792625CF42278DD3331C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "";
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = P_D533BA5620A8B4C21FDE61778C8921F4 /* Project object */;
+}
