@@ -67,9 +67,9 @@
 			children = (
 				CBB0537721B3BE1E00BDDC2B /* Assets.xcassets */,
 				CBB0537821B3BE1E00BDDC2B /* LaunchScreen.storyboard */,
-				CBB0537A21B3BE1E00BDDC2B /* API */,
 				CBB0537E21B3BE1E00BDDC2B /* AppDelegate.swift */,
 				CBB0537F21B3BE1E00BDDC2B /* Service */,
+				CBB0537A21B3BE1E00BDDC2B /* API */,
 				CBB0538621B3BE1E00BDDC2B /* Info.plist */,
 			);
 			path = FlickerPublicPhotosViewer;

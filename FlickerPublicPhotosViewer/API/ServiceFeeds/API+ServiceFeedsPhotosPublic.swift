@@ -7,24 +7,24 @@
 //
 
 import Foundation
+import APIDefinition
+import XMLParsing
 
-//import APIDefinition
-//
-//extension API.Service.Feeds {
-//    struct PhotosPublic: APIDefinition {
-//        var method: HTTPMethod { return .GET }
-//
-//        var path: String {
-//            return "/services/feeds/photos_public.gne"
-//        }
-//
-//        typealias Response = PhotoPublicResponse
-//    }
-//
-//    struct PhotoPublicResponse: ResponseDataTypeProtocol {
-//        init?(data: Data) {
-//
-//        }
-//    }
-//}
+extension API.Service.Feeds {
+    struct PhotosPublic: APIDefinition {
+        var method: HTTPMethod { return .GET }
+
+        var path: String {
+            return "/services/feeds/photos_public.gne"
+        }
+
+        typealias Response = PhotoPublicResponse
+    }
+
+    struct PhotoPublicResponse: ResponseDataTypeProtocol {
+        init?(data: Data) {
+
+        }
+    }
+}
 
