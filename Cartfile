@@ -1,8 +1,8 @@
 github "ShawnMoore/XMLParsing.git"
 github "ra1028/DifferenceKit"
-#github "ReactorKit/ReactorKit"
+github "ReactorKit/ReactorKit"
 github "ReactiveX/RxSwift"
 #binary "https://github.com/kawoou/ReactorKit-Carthage/raw/master/ReactorKit"
-binary "https://github.com/kawoou/ReactorKit-Carthage/raw/master/ReactorKit" == 1.2.1
+#binary "https://github.com/kawoou/ReactorKit-Carthage/raw/master/ReactorKit" == 1.2.1
 
 

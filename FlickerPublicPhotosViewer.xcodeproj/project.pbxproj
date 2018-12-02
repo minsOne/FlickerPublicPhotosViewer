@@ -20,8 +20,28 @@
 		CBB0539521B3BFB300BDDC2B /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB0539021B3BFB300BDDC2B /* RxSwift.framework */; };
 		CBB0539621B3BFB300BDDC2B /* XMLParsing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB0539121B3BFB300BDDC2B /* XMLParsing.framework */; };
 		CBB0539721B3BFB300BDDC2B /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB0539221B3BFB300BDDC2B /* RxBlocking.framework */; };
-		CBB0539921B3C19600BDDC2B /* ReactorKitRuntime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB0539821B3C19600BDDC2B /* ReactorKitRuntime.framework */; };
+		CBB053B321B3C89C00BDDC2B /* ReactorKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB053B221B3C89C00BDDC2B /* ReactorKit.framework */; };
+		CBB053E621B3CC3A00BDDC2B /* APIDefinition.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB053E521B3CC3A00BDDC2B /* APIDefinition.framework */; };
+		CBB053E821B3CC3A00BDDC2B /* FoundationExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB053E721B3CC3A00BDDC2B /* FoundationExtension.framework */; };
+		CBB053EA21B3CC3A00BDDC2B /* ImageDownloader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB053E921B3CC3A00BDDC2B /* ImageDownloader.framework */; };
+		CBB053EC21B3CC3A00BDDC2B /* Navigator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB053EB21B3CC3A00BDDC2B /* Navigator.framework */; };
+		CBB053EE21B3CC3A00BDDC2B /* UIKitExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB053ED21B3CC3A00BDDC2B /* UIKitExtension.framework */; };
+		CBB053F121B3D21C00BDDC2B /* APIDefinition+RxSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB053F021B3D21C00BDDC2B /* APIDefinition+RxSwift.swift */; };
+		CBB053F321B3D28400BDDC2B /* ReactorKitRuntime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB053F221B3D28400BDDC2B /* ReactorKitRuntime.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CBB053C621B3CBA600BDDC2B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		CBB0537721B3BE1E00BDDC2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -39,7 +59,14 @@
 		CBB0539021B3BFB300BDDC2B /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxSwift.framework; sourceTree = "<group>"; };
 		CBB0539121B3BFB300BDDC2B /* XMLParsing.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = XMLParsing.framework; sourceTree = "<group>"; };
 		CBB0539221B3BFB300BDDC2B /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxBlocking.framework; sourceTree = "<group>"; };
-		CBB0539821B3C19600BDDC2B /* ReactorKitRuntime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ReactorKitRuntime.framework; sourceTree = "<group>"; };
+		CBB053B221B3C89C00BDDC2B /* ReactorKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ReactorKit.framework; sourceTree = "<group>"; };
+		CBB053E521B3CC3A00BDDC2B /* APIDefinition.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = APIDefinition.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBB053E721B3CC3A00BDDC2B /* FoundationExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FoundationExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBB053E921B3CC3A00BDDC2B /* ImageDownloader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ImageDownloader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBB053EB21B3CC3A00BDDC2B /* Navigator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Navigator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBB053ED21B3CC3A00BDDC2B /* UIKitExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UIKitExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBB053F021B3D21C00BDDC2B /* APIDefinition+RxSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIDefinition+RxSwift.swift"; sourceTree = "<group>"; };
+		CBB053F221B3D28400BDDC2B /* ReactorKitRuntime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ReactorKitRuntime.framework; sourceTree = "<group>"; };
 		FR_482C0ED4A8534EB16C4A04AFC55B178D /* FlickerPublicPhotosViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlickerPublicPhotosViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FR_89D3B039912CC6871139FE0619606076 /* DifferenceKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DifferenceKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -49,13 +76,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBB053E621B3CC3A00BDDC2B /* APIDefinition.framework in Frameworks */,
+				CBB053E821B3CC3A00BDDC2B /* FoundationExtension.framework in Frameworks */,
+				CBB053EA21B3CC3A00BDDC2B /* ImageDownloader.framework in Frameworks */,
+				CBB053EC21B3CC3A00BDDC2B /* Navigator.framework in Frameworks */,
+				CBB053EE21B3CC3A00BDDC2B /* UIKitExtension.framework in Frameworks */,
 				CBB0539521B3BFB300BDDC2B /* RxSwift.framework in Frameworks */,
 				CBB0539321B3BFB300BDDC2B /* RxCocoa.framework in Frameworks */,
 				CBB0539621B3BFB300BDDC2B /* XMLParsing.framework in Frameworks */,
+				CBB053B321B3C89C00BDDC2B /* ReactorKit.framework in Frameworks */,
 				BF_1923445AD035869013ECA67242F9435D /* DifferenceKit.framework in Frameworks */,
+				CBB053F321B3D28400BDDC2B /* ReactorKitRuntime.framework in Frameworks */,
 				CBB0539421B3BFB300BDDC2B /* RxAtomic.framework in Frameworks */,
 				CBB0539721B3BFB300BDDC2B /* RxBlocking.framework in Frameworks */,
-				CBB0539921B3C19600BDDC2B /* ReactorKitRuntime.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +103,7 @@
 				CBB0537E21B3BE1E00BDDC2B /* AppDelegate.swift */,
 				CBB0537F21B3BE1E00BDDC2B /* Service */,
 				CBB0537A21B3BE1E00BDDC2B /* API */,
+				CBB053EF21B3D1FA00BDDC2B /* Extension */,
 				CBB0538621B3BE1E00BDDC2B /* Info.plist */,
 			);
 			path = FlickerPublicPhotosViewer;
@@ -111,10 +145,26 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		CBB053E021B3CC2500BDDC2B /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Framework;
+			sourceTree = "<group>";
+		};
+		CBB053EF21B3D1FA00BDDC2B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				CBB053F021B3D21C00BDDC2B /* APIDefinition+RxSwift.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		G_2CA8084794685E43C19566A5FC6CDE02 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				CBB0539821B3C19600BDDC2B /* ReactorKitRuntime.framework */,
+				CBB053F221B3D28400BDDC2B /* ReactorKitRuntime.framework */,
+				CBB053B221B3C89C00BDDC2B /* ReactorKit.framework */,
 				CBB0538F21B3BFB300BDDC2B /* RxAtomic.framework */,
 				CBB0539221B3BFB300BDDC2B /* RxBlocking.framework */,
 				CBB0538E21B3BFB300BDDC2B /* RxCocoa.framework */,
@@ -128,6 +178,11 @@
 		G_2E1A20FC3BB897F47052AC37A82317D5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CBB053E521B3CC3A00BDDC2B /* APIDefinition.framework */,
+				CBB053E721B3CC3A00BDDC2B /* FoundationExtension.framework */,
+				CBB053E921B3CC3A00BDDC2B /* ImageDownloader.framework */,
+				CBB053EB21B3CC3A00BDDC2B /* Navigator.framework */,
+				CBB053ED21B3CC3A00BDDC2B /* UIKitExtension.framework */,
 				G_E0EDDF4D6A4C32D71D2E32D9E19B50D6 /* Carthage */,
 			);
 			name = Frameworks;
@@ -144,6 +199,7 @@
 		G_531F8652EE46C6AF552E8C891BACE54E = {
 			isa = PBXGroup;
 			children = (
+				CBB053E021B3CC2500BDDC2B /* Framework */,
 				CBB0537621B3BE1E00BDDC2B /* FlickerPublicPhotosViewer */,
 				G_2E1A20FC3BB897F47052AC37A82317D5 /* Frameworks */,
 				G_4850CAC48C5308B1B8E927EAD9FF09FF /* Products */,
@@ -169,6 +225,7 @@
 				SBP_8E12A80C8822168209744B7163C37A6F /* Sources */,
 				FBP_F8D90736A6CDDF896256709AF7C229A2 /* Frameworks */,
 				SSBP_05B511293BFEEDA895F506977478CF81 /* Carthage */,
+				CBB053C621B3CBA600BDDC2B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -217,6 +274,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/XMLParsing.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ReactorKit.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/ReactorKitRuntime.framework",
 			);
 			name = Carthage;
@@ -227,6 +285,7 @@
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxCocoa.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/XMLParsing.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ReactorKit.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ReactorKitRuntime.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -243,6 +302,7 @@
 				CBB0538D21B3BE3C00BDDC2B /* Main.storyboard in Sources */,
 				CBB0538921B3BE1E00BDDC2B /* AppDelegate.swift in Sources */,
 				CBB0538C21B3BE1E00BDDC2B /* MainReactor.swift in Sources */,
+				CBB053F121B3D21C00BDDC2B /* APIDefinition+RxSwift.swift in Sources */,
 				CBB0538821B3BE1E00BDDC2B /* API.swift in Sources */,
 				CBB0538A21B3BE1E00BDDC2B /* ViewController.swift in Sources */,
 				CBB0538721B3BE1E00BDDC2B /* API+ServiceFeedsPhotosPublic.swift in Sources */,
@@ -283,7 +343,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/FlickerPublicPhotosViewer/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kr.minsone.FlickerPublicPhotosViewer;
 				SDKROOT = iphoneos;
@@ -353,7 +413,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/FlickerPublicPhotosViewer/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kr.minsone.FlickerPublicPhotosViewer;
 				SDKROOT = iphoneos;

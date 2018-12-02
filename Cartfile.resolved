@@ -1,4 +1,4 @@
-binary "https://github.com/kawoou/ReactorKit-Carthage/raw/master/ReactorKit" "1.2.1"
 github "ReactiveX/RxSwift" "4.4.0"
+github "ReactorKit/ReactorKit" "1.2.1"
 github "ShawnMoore/XMLParsing" "0.0.3"
 github "ra1028/DifferenceKit" "0.8.0"
