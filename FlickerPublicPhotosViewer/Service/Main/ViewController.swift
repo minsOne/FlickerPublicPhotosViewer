@@ -7,13 +7,53 @@
 //
 
 import UIKit
+import ReactorKit
+import RxSwift
 
 
 class ViewController: UIViewController {
 
+    let reactor = MainViewReactor()
+    let bag = DisposeBag()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        setup()
+        reactor.action.onNext(.초기화)
+    }
+    
+    private func setup() {
+        
+    }
+    
+    private func bindState() {
+        reactor.state
+            .map { $0.isLoading }
+            .distinctUntilChanged()
+            .subscribe(onNext: { isLoading in
+                
+            })
+            .disposed(by: bag)
+        
+        reactor.state
+            .map { $0.photos }
+            .distinctUntilChanged()
+            .subscribe(onNext: { photos in
+                
+            })
+            .disposed(by: bag)
+        
+        reactor.state
+            .map { $0.error }
+            .filter { $0 != nil }
+            .subscribe(onNext: { error in
+                
+            })
+            .disposed(by: bag)
+    }
+    
+    private func bindView() {
+        
     }
 }
 

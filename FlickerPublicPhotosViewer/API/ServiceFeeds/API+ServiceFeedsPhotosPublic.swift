@@ -22,8 +22,35 @@ extension API.Service.Feeds {
     }
 
     struct PhotoPublicResponse: ResponseDataTypeProtocol {
+        struct Feeds: Decodable {
+            struct Link: Decodable {
+                let rel: String
+                let href: URL
+            }
+            struct Entry: Decodable {
+                let published: String
+                let updated: String
+                let link: [Link]
+                var thumbnameImageURL: URL? {
+                    return link.first?.href
+                }
+                var largeImageURL: URL? {
+                    return link.last?.href
+                }
+            }
+            var title: String
+            var entry: [Entry]
+        }
+        
+        var feed: Feeds
+    
         init?(data: Data) {
-
+            let decoder = XMLDecoder()
+            if let result = try? decoder.decode(Feeds.self, from: data) {
+                feed = result
+            } else {
+                return nil
+            }
         }
     }
 }

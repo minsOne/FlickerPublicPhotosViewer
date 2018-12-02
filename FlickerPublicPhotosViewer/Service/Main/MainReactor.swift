@@ -16,7 +16,9 @@ enum MainReactorable {
     }
     
     struct State {
-        
+        var isLoading: Bool
+        var photos: [URL?]
+        var error: Error?
     }
 }
 
@@ -32,13 +34,45 @@ class MainViewReactor: Reactor {
         case 에러(Error)
     }
     
-    let initialState: State = State()
+    struct Model {
+        var response: API.Service.Feeds.PhotoPublicResponse? = nil
+    }
+    
+    let initialState: State
+    var model: Model
+
+    init() {
+        model = Model()
+
+        initialState = State(isLoading: false,
+                             photos: [],
+                             error: nil)
+    }
     
     func mutate(action: MainReactorable.Action) -> Observable<Mutation> {
         switch action {
         case .초기화: return initialize()
-            
         }
+    }
+    
+    func reduce(state: MainReactorable.State, mutation: MainViewReactor.Mutation) -> MainReactorable.State {
+        var newState = state
+        newState.error = nil
+        
+        switch mutation {
+        case .로딩중:
+            newState.isLoading = true
+        case .로딩완료:
+            newState.isLoading = false
+        case .이미지목록(let resp):
+            model.response = resp
+            newState.photos = resp.feed.entry.map { $0.thumbnameImageURL }
+            break
+        case .에러(let err):
+            newState.error = err
+        }
+        
+        return newState
     }
     
     private func initialize() -> Observable<Mutation> {
