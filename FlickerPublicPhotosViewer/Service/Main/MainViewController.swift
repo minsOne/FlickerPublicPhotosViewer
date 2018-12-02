@@ -100,6 +100,7 @@ import ImageDownloader
 
 final class MainViewThumbnailImageCollectionViewCell: UICollectionViewCell {
     @IBOutlet private(set) weak var imageView: UIImageView!
+    @IBOutlet private(set) weak var loadingIndicatorView: UIActivityIndicatorView!
 
     private var imageURL: URL? = nil
     
@@ -111,22 +112,27 @@ final class MainViewThumbnailImageCollectionViewCell: UICollectionViewCell {
         super.prepareForReuse()
         imageView.image = nil
         imageURL = nil
+        loadingIndicatorView.stopAnimating()
     }
     
     func setImageURL(_ url: URL?) {
         self.imageURL = url
-
-        self.imageView.download(url: url) { [weak self] (result) in
-            guard let self = self else { return }
+        
+        loadingIndicatorView.startAnimating()
+        self.imageView.download(url: url) { [weak self, weak loadingIndicatorView] (resultUrl, result) in
+            guard let self = self,
+                resultUrl == url
+                else { return }
+            
+            defer {
+                loadingIndicatorView?.stopAnimating()
+            }
+            
             switch result {
-            case .value(let (url, image)):
-                if self.imageURL == url {
-                    self.imageView.image = image
-                }
-            case .error(let error):
-                if self.imageURL == url {
-                    self.imageView.image = nil
-                }
+            case .value(let image):
+                self.imageView.image = image
+            case .error:
+                self.imageView.image = nil
             }
         }
     }

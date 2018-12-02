@@ -38,9 +38,14 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hx5-np-rAd">
                                                     <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                                 </imageView>
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="FYb-oX-gy6">
+                                                    <rect key="frame" x="65" y="65" width="20" height="20"/>
+                                                </activityIndicatorView>
                                             </subviews>
                                         </view>
                                         <constraints>
+                                            <constraint firstItem="FYb-oX-gy6" firstAttribute="centerX" secondItem="AVR-Sd-vxo" secondAttribute="centerX" id="94F-B4-pzx"/>
+                                            <constraint firstItem="FYb-oX-gy6" firstAttribute="centerY" secondItem="AVR-Sd-vxo" secondAttribute="centerY" id="RJf-fk-biZ"/>
                                             <constraint firstAttribute="bottom" secondItem="Hx5-np-rAd" secondAttribute="bottom" id="big-dH-UbZ"/>
                                             <constraint firstItem="Hx5-np-rAd" firstAttribute="top" secondItem="AVR-Sd-vxo" secondAttribute="top" id="buC-Za-BF1"/>
                                             <constraint firstAttribute="trailing" secondItem="Hx5-np-rAd" secondAttribute="trailing" id="dFl-eN-TjS"/>
@@ -48,6 +53,7 @@
                                         </constraints>
                                         <connections>
                                             <outlet property="imageView" destination="Hx5-np-rAd" id="zVe-IF-lqX"/>
+                                            <outlet property="loadingIndicatorView" destination="FYb-oX-gy6" id="vnb-qy-DUD"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

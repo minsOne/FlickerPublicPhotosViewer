@@ -18,6 +18,26 @@ public enum ImageDownloadError: Swift.Error {
 private class ImageCache {
     var cache = NSCache<NSURL, UIImage>()
     static let shared = ImageCache()
+    
+    static func loadFromCacheDisk(fileName: String) -> UIImage? {
+        let paths = FileManager.default.urls(for: .cachesDirectory,
+                                             in: .userDomainMask)
+        if let filePath = paths.first?.appendingPathComponent(fileName),
+            let image = UIImage(contentsOfFile: filePath.absoluteString) {
+            return image
+        } else {
+            return nil
+        }
+    }
+    
+    static func saveToCacheDisk(fileName: String, with image: UIImage) {
+        let paths = FileManager.default.urls(for: .cachesDirectory,
+                                             in: .userDomainMask)
+        guard let filePath = paths.first?.appendingPathComponent(fileName),
+            let data = image.pngData()
+            else { return }
+        try? data.write(to: filePath)
+    }
 }
 
 public class ImageDownloader {
@@ -27,13 +47,18 @@ public class ImageDownloader {
         self.networking = networking
     }
 
-    func download(url: URL, handler: ((Result<(URL, UIImage), ImageDownloadError>) -> Void)? = nil) {
+    func download(url: URL, handler: ((URL, Result<UIImage, ImageDownloadError>) -> Void)? = nil) {
         if let cachedImage = ImageCache.shared.cache.object(forKey: url as NSURL) {
-            handler?(.value((url, cachedImage)))
+            handler?(url, .value(cachedImage))
             return
         }
         
         // TODO: DiskCache 구현 필요
+        // Create path.
+        if let cachedImage = ImageCache.loadFromCacheDisk(fileName: "\(url.absoluteString.hashValue)") {
+            handler?(url, .value(cachedImage))
+            return
+        }
 
         let task = networking
             .dataTask(with: url) { data, _, error in
@@ -41,11 +66,12 @@ public class ImageDownloader {
                     if let data = data,
                         let image = UIImage(data: data) {
                         ImageCache.shared.cache.setObject(image, forKey: url as NSURL)
-                        handler?(.value((url, image)))
+                        ImageCache.saveToCacheDisk(fileName: "\(url.absoluteString.hashValue)", with: image)
+                        handler?(url, .value(image))
                     } else if let error = error as NSError? {
-                        handler?(.error(.네트워크에러(error)))
+                        handler?(url, .error(.네트워크에러(error)))
                     } else {
-                        handler?(.error(.데이터없음))
+                        handler?(url, .error(.데이터없음))
                     }
                 }
             }

@@ -11,20 +11,20 @@ import FoundationExtension
 import UIKit
 
 public extension UIImageView {
-    func download(url: URL?, handler: ((Result<(URL, UIImage), ImageDownloadError>) -> Void)? = nil) {
+    func download(url: URL?, handler: ((URL, Result<UIImage, ImageDownloadError>) -> Void)? = nil) {
         guard let url = url else {
             self.image = nil
             return
         }
         
-        let completionHandler: (Result<(URL, UIImage), ImageDownloadError>) -> Void
+        let completionHandler: (URL, Result<UIImage, ImageDownloadError>) -> Void
         
         if let handler = handler {
             completionHandler = handler
         } else {
-            completionHandler = { [weak self] result in
+            completionHandler = { [weak self] url, result in
                 switch result {
-                case .value(let (_, image)):
+                case .value(let image):
                     self?.image = image
                 case .error:
                     self?.image = nil
