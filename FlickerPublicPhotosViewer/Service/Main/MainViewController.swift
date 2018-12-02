@@ -46,8 +46,8 @@ final class MainViewController: UIViewController {
         reactor.state
             .map { $0.photos }
             .distinctUntilChanged()
-            .subscribe(onNext: { photos in
-                print(photos)
+            .subscribe(onNext: { [weak collectionShim] photos in
+                collectionShim?.updateDataSource(photos)
             })
             .disposed(by: bag)
         
@@ -66,30 +66,39 @@ final class MainViewController: UIViewController {
 }
 
 
-private class MainViewCollectionViewShim: NSObject, UICollectionViewDelegate, UICollectionViewDataSource {
-    private var dataSource: [URL?] = []
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainViewThumbnailImageCollectionViewCell", for: indexPath) as? MainViewThumbnailImageCollectionViewCell {
-            return cell
-        }
-        return MainViewThumbnailImageCollectionViewCell()
-    }
-    
+fileprivate class MainViewCollectionViewShim: NSObject, UICollectionViewDelegate, UICollectionViewDataSource {
     weak var collectionView: UICollectionView?
+    private var dataSource: [URL?] = []
+
     init(collectionView: UICollectionView) {
         self.collectionView = collectionView
         super.init()
         collectionView.delegate = self
         collectionView.dataSource = self
     }
+    
+    func updateDataSource(_ source: [URL?]) {
+        self.dataSource = source
+        self.collectionView?.reloadData()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return dataSource.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainViewThumbnailImageCollectionViewCell", for: indexPath) as? MainViewThumbnailImageCollectionViewCell {
+            guard let url = dataSource[safe: indexPath.row] else { return cell }
+            cell.setImageURL(url)
+            return cell
+        }
+        return MainViewThumbnailImageCollectionViewCell()
+    }
 }
 
-private class MainViewThumbnailImageCollectionViewCell: UICollectionViewCell {
+import ImageDownloader
+
+final class MainViewThumbnailImageCollectionViewCell: UICollectionViewCell {
     @IBOutlet private(set) weak var imageView: UIImageView!
 
     private var imageURL: URL? = nil
@@ -105,6 +114,20 @@ private class MainViewThumbnailImageCollectionViewCell: UICollectionViewCell {
     }
     
     func setImageURL(_ url: URL?) {
-        
+        self.imageURL = url
+
+        self.imageView.download(url: url) { [weak self] (result) in
+            guard let self = self else { return }
+            switch result {
+            case .value(let (url, image)):
+                if self.imageURL == url {
+                    self.imageView.image = image
+                }
+            case .error(let error):
+                if self.imageURL == url {
+                    self.imageView.image = nil
+                }
+            }
+        }
     }
 }

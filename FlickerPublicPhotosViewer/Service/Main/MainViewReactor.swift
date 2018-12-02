@@ -66,7 +66,7 @@ class MainViewReactor: Reactor {
             newState.isLoading = false
         case .이미지목록(let resp):
             model.response = resp
-            newState.photos = resp.feed.entry.map { $0.thumbnameImageURL }
+            newState.photos = resp.feed.entry.map { $0.largeImageURL }
             break
         case .에러(let err):
             newState.error = err

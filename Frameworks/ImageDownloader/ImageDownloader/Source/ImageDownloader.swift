@@ -37,14 +37,16 @@ public class ImageDownloader {
 
         let task = networking
             .dataTask(with: url) { data, _, error in
-                if let data = data,
-                    let image = UIImage(data: data) {
-                    ImageCache.shared.cache.setObject(image, forKey: url as NSURL)
-                    handler?(.value((url, image)))
-                } else if let error = error as NSError? {
-                    handler?(.error(.네트워크에러(error)))
-                } else {
-                    handler?(.error(.데이터없음))
+                DispatchQueue.main.async {
+                    if let data = data,
+                        let image = UIImage(data: data) {
+                        ImageCache.shared.cache.setObject(image, forKey: url as NSURL)
+                        handler?(.value((url, image)))
+                    } else if let error = error as NSError? {
+                        handler?(.error(.네트워크에러(error)))
+                    } else {
+                        handler?(.error(.데이터없음))
+                    }
                 }
             }
         task.resume()
