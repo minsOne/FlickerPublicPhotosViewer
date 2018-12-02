@@ -11,7 +11,7 @@ import ReactorKit
 import RxSwift
 
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
 
     let reactor = MainViewReactor()
     let bag = DisposeBag()
@@ -33,7 +33,7 @@ class ViewController: UIViewController {
             .map { $0.isLoading }
             .distinctUntilChanged()
             .subscribe(onNext: { isLoading in
-                
+                print(isLoading)
             })
             .disposed(by: bag)
         
@@ -41,7 +41,7 @@ class ViewController: UIViewController {
             .map { $0.photos }
             .distinctUntilChanged()
             .subscribe(onNext: { photos in
-                
+                print(photos)
             })
             .disposed(by: bag)
         
@@ -49,7 +49,7 @@ class ViewController: UIViewController {
             .map { $0.error }
             .filter { $0 != nil }
             .subscribe(onNext: { error in
-                
+                print(error)
             })
             .disposed(by: bag)
     }
