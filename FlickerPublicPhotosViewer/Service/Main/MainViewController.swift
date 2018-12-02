@@ -13,6 +13,7 @@ import RxSwift
 final class MainViewController: UIViewController {
 
     @IBOutlet private(set) weak var collectionView: UICollectionView!
+    @IBOutlet private(set) weak var loadingIndicator: UIActivityIndicatorView!
     
     let reactor = MainViewReactor()
     let bag = DisposeBag()
@@ -35,8 +36,10 @@ final class MainViewController: UIViewController {
         reactor.state
             .map { $0.isLoading }
             .distinctUntilChanged()
-            .subscribe(onNext: { isLoading in
-                print(isLoading)
+            .subscribe(onNext: { [weak loadingIndicator] isLoading in
+                isLoading
+                    ? loadingIndicator?.startAnimating()
+                    : loadingIndicator?.stopAnimating()
             })
             .disposed(by: bag)
         
