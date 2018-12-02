@@ -51,4 +51,14 @@ extension Navigator.Present {
                                       animated: animated,
                                       completion: completion)
     }
+    
+    static func navigationViewController(root viewController: UIViewController, animated: Bool = true, completion: (() -> Swift.Void)? = nil) {
+        guard let rootViewController = Navigator.rootViewController else { return }
+        let currentViewController = Navigator.recursivelyPresentedViewController(from: rootViewController)
+
+        let naviViewController = UINavigationController(rootViewController: viewController)
+        currentViewController.present(naviViewController,
+                                      animated: animated,
+                                      completion: completion)
+    }
 }
