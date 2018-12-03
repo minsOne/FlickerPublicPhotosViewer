@@ -10,10 +10,11 @@ import ReactorKit
 import RxSwift
 import UIKit
 import DifferenceKit
+import Navigator
 
 enum SliderReactoable {
     enum Action {
-        case 초기화
+        case 시작
         case 다음
         case 슬라이드쇼시간설정
         case 나가기
@@ -55,7 +56,10 @@ class SliderViewReactor: Reactor {
     private let imageListSubject = PublishSubject<[URL]>()
     let disposeBag = DisposeBag()
     
-    init() {
+    let changeSliderShowDurationService: NumberPromptServiceProtocol
+    
+    init(changeSliderShowDurationService service: NumberPromptServiceProtocol) {
+        self.changeSliderShowDurationService = service
         self.model = .init(photosURLs: [],
                            currentIndex: -1)
         self.initialState = .init(currentSlider: .first,
@@ -76,12 +80,12 @@ class SliderViewReactor: Reactor {
     
     func mutate(action: SliderReactoable.Action) -> Observable<SliderViewReactor.Mutation> {
         switch action {
-        case .초기화:
+        case .시작:
             return initialize()
         case .다음:
             return .just(.다음슬라이드)
         case .슬라이드쇼시간설정:
-            return .just(.슬라이드쇼시간설정(5))
+            return changeSliderShowDuration()
         case .나가기:
             return .just(.나가기)
         }
@@ -140,6 +144,25 @@ class SliderViewReactor: Reactor {
                 return resp.feed.entry.compactMap { $0.largeImageURL }
             }
             .map { Mutation.초기이미지목록($0) }
+    }
+    
+    private func changeSliderShowDuration() -> Observable<Mutation> {
+        var service = self.changeSliderShowDurationService
+        return Observable.create { observer -> Disposable in
+            let vc = service.viewController
+            service.completion = { time in
+                if let time = time {
+                    observer.onNext(SliderViewReactor.Mutation.슬라이드쇼시간설정(CGFloat(time)))
+                    observer.onCompleted()
+                } else {
+                    observer.onCompleted()
+                }
+            }
+            
+            Navigator.Present.viewController(vc)
+            return Disposables.create()
+            }
+            .subscribeOn(MainScheduler.instance)
     }
 }
 

@@ -45,7 +45,7 @@ class SliderViewController: UIViewController, StoryboardIdentifiable {
         setup()
         bindState()
         bindView()
-        reactor?.action.onNext(.초기화)
+        reactor?.action.onNext(.시작)
     }
     override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation {
         return UIStatusBarAnimation.slide
