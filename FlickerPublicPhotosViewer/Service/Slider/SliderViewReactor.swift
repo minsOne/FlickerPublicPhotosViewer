@@ -58,7 +58,8 @@ class SliderViewReactor: Reactor {
     
     let changeSliderShowDurationService: NumberPromptServiceProtocol
     
-    init(changeSliderShowDurationService service: NumberPromptServiceProtocol) {
+    init(changeSliderShowDurationService service: NumberPromptServiceProtocol,
+         intervalGetFlickerURLs interval: Double = 30) {
         self.changeSliderShowDurationService = service
         self.model = .init(photosURLs: [],
                            currentIndex: -1)
@@ -67,13 +68,12 @@ class SliderViewReactor: Reactor {
                                   secondSliderURL: nil,
                                   animateDuration: State.defaultAnimateDuration)
         
-        Observable<Int>.interval(60.0, scheduler: MainScheduler.instance)
+        Observable<Int>.interval(interval, scheduler: MainScheduler.instance)
             .flatMapLatest { _ in API.Service.Feeds.PhotosPublic()
                 .requestObservable()
                 .map { $0.feed.entry.compactMap { $0.largeImageURL } }
                 .catchErrorJustReturn([])
             }
-            .debug()
             .bind(to: imageListSubject)
             .disposed(by: disposeBag)
     }
