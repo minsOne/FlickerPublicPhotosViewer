@@ -9,9 +9,9 @@
 import Foundation
 import UIKit
 
-enum Navigator {}
+public enum Navigator {}
 
-extension Navigator {
+public extension Navigator {
     enum Push {}
     enum Pop {}
     enum Present {}
@@ -31,7 +31,7 @@ extension Navigator {
     }
 }
 
-extension Navigator.Push {
+public extension Navigator.Push {
     static func viewController(_ viewController: UIViewController, animated: Bool = true) {
         guard let rootViewController = Navigator.rootViewController else { return }
         let currentViewController = Navigator.recursivelyPresentedViewController(from: rootViewController)
@@ -42,7 +42,7 @@ extension Navigator.Push {
     }
 }
 
-extension Navigator.Present {
+public extension Navigator.Present {
     static func viewController(_ viewController: UIViewController, animated: Bool = true, completion: (() -> Swift.Void)? = nil) {
         guard let rootViewController = Navigator.rootViewController else { return }
         let currentViewController = Navigator.recursivelyPresentedViewController(from: rootViewController)
