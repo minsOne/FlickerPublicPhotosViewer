@@ -9,21 +9,29 @@
 import Foundation
 import FoundationExtension
 import UIKit
+import APIDefinition
 
 public enum ImageDownloadError: Swift.Error {
     case 데이터없음
     case 네트워크에러(NSError)
 }
 
-public class ImageDownloader {
-    let networking: URLSession
-    let imageCacheService: ImageCacheProtocol
+protocol ImageDownloaderProtocol {
+    var networking: NetworkingProtocol { get }
+    var imageCacheService: ImageCacheProtocol { get }
+}
 
-    init(networking: URLSession = URLSession.shared,
-         imageCacheService: ImageCacheProtocol = ImageCacheService.shared) {
-        self.networking = networking
-        self.imageCacheService = imageCacheService
+extension ImageDownloaderProtocol {
+    var networking: NetworkingProtocol {
+        return URLSession.shared
     }
+    var imageCacheService: ImageCacheProtocol {
+        return ImageCacheService.shared
+    }
+}
+
+public class ImageDownloader: ImageDownloaderProtocol {
+    init() {}
 
     func download(url: URL, handler: ((URL, Result<UIImage, ImageDownloadError>) -> Void)? = nil) {
         let imageCacheService = self.imageCacheService
@@ -39,9 +47,9 @@ public class ImageDownloader {
             handler?(url, .value(cachedImage))
             return
         }
-        
+  
         let task = networking
-            .dataTask(with: url) { data, _, error in
+            .dataTask(with: .init(url: url)) { data, _, error in
                 DispatchQueue.main.async {
                     if let data = data,
                         let image = UIImage(data: data) {
