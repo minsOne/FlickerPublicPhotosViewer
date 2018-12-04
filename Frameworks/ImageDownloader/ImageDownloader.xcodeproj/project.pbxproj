@@ -11,6 +11,7 @@
 		CB14B94421B39AA40013A85F /* ImageDownloaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB14B94321B39AA40013A85F /* ImageDownloaderTests.swift */; };
 		CB14B94621B39AA40013A85F /* ImageDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = CB14B93821B39AA40013A85F /* ImageDownloader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CB14B95121B39ABE0013A85F /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB14B95021B39ABE0013A85F /* ImageDownloader.swift */; };
+		CB8D02E321B6C97F005C8009 /* ImageCacheService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8D02E221B6C97F005C8009 /* ImageCacheService.swift */; };
 		CBB053B121B3C41000BDDC2B /* FoundationExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB053B021B3C41000BDDC2B /* FoundationExtension.framework */; };
 		CBB053F521B3F04E00BDDC2B /* UIImageView+Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB053F421B3F04E00BDDC2B /* UIImageView+Downloader.swift */; };
 /* End PBXBuildFile section */
@@ -33,6 +34,7 @@
 		CB14B94321B39AA40013A85F /* ImageDownloaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderTests.swift; sourceTree = "<group>"; };
 		CB14B94521B39AA40013A85F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB14B95021B39ABE0013A85F /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		CB8D02E221B6C97F005C8009 /* ImageCacheService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheService.swift; sourceTree = "<group>"; };
 		CBB053B021B3C41000BDDC2B /* FoundationExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FoundationExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBB053F421B3F04E00BDDC2B /* UIImageView+Downloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Downloader.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				CB14B95021B39ABE0013A85F /* ImageDownloader.swift */,
+				CB8D02E221B6C97F005C8009 /* ImageCacheService.swift */,
 				CBB053F421B3F04E00BDDC2B /* UIImageView+Downloader.swift */,
 			);
 			path = Source;
@@ -221,6 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB8D02E321B6C97F005C8009 /* ImageCacheService.swift in Sources */,
 				CB14B95121B39ABE0013A85F /* ImageDownloader.swift in Sources */,
 				CBB053F521B3F04E00BDDC2B /* UIImageView+Downloader.swift in Sources */,
 			);
