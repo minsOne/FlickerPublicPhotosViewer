@@ -139,8 +139,8 @@
 		CBB0537F21B3BE1E00BDDC2B /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				CBB053F621B55A8100BDDC2B /* Slider */,
 				CBB0538021B3BE1E00BDDC2B /* Main */,
+				CBB053F621B55A8100BDDC2B /* Slider */,
 				CBB0540721B59EB800BDDC2B /* AlertController */,
 			);
 			path = Service;

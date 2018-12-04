@@ -9,7 +9,6 @@ import Foundation
 import UIKit
 import RxSwift
 
-
 protocol NumberPromptServiceProtocol {
     var title: String { get }
     var message: String { get }
