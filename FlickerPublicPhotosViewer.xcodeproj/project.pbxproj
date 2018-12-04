@@ -35,6 +35,114 @@
 		CBB0540621B59EB400BDDC2B /* NumberPromptService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB0540521B59EB300BDDC2B /* NumberPromptService.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		CB8D02B021B6C8F6005C8009 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB8D02AB21B6C8F6005C8009 /* APIDefinition.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CBF2A9D621B02A000020D4CD;
+			remoteInfo = APIDefinition;
+		};
+		CB8D02B221B6C8F6005C8009 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB8D02AB21B6C8F6005C8009 /* APIDefinition.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CBF2A9DF21B02A010020D4CD;
+			remoteInfo = APIDefinitionTests;
+		};
+		CB8D02B921B6C8FC005C8009 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB8D02B421B6C8FC005C8009 /* FoundationExtension.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E4A6949F21B1462200F564FD;
+			remoteInfo = FoundationExtension;
+		};
+		CB8D02BB21B6C8FC005C8009 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB8D02B421B6C8FC005C8009 /* FoundationExtension.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E4A694A821B1462200F564FD;
+			remoteInfo = FoundationExtensionTests;
+		};
+		CB8D02C221B6C903005C8009 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB8D02BD21B6C902005C8009 /* ImageDownloader.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CB14B93521B39AA40013A85F;
+			remoteInfo = ImageDownloader;
+		};
+		CB8D02C421B6C903005C8009 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB8D02BD21B6C902005C8009 /* ImageDownloader.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CB14B93E21B39AA40013A85F;
+			remoteInfo = ImageDownloaderTests;
+		};
+		CB8D02CB21B6C90B005C8009 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB8D02C621B6C90B005C8009 /* Navigator.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E4A694EF21B14C6A00F564FD;
+			remoteInfo = Navigator;
+		};
+		CB8D02CD21B6C90B005C8009 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB8D02C621B6C90B005C8009 /* Navigator.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E4A694F821B14C6A00F564FD;
+			remoteInfo = NavigatorTests;
+		};
+		CB8D02D421B6C911005C8009 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB8D02CF21B6C911005C8009 /* UIKitExtension.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E4A694C821B14ACF00F564FD;
+			remoteInfo = UIKitExtension;
+		};
+		CB8D02D621B6C911005C8009 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB8D02CF21B6C911005C8009 /* UIKitExtension.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E4A694D121B14ACF00F564FD;
+			remoteInfo = UIKitExtensionTests;
+		};
+		CB8D02D821B6C91E005C8009 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB8D02CF21B6C911005C8009 /* UIKitExtension.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E4A694C721B14ACF00F564FD;
+			remoteInfo = UIKitExtension;
+		};
+		CB8D02DA21B6C91E005C8009 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB8D02C621B6C90B005C8009 /* Navigator.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E4A694EE21B14C6A00F564FD;
+			remoteInfo = Navigator;
+		};
+		CB8D02DC21B6C91E005C8009 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB8D02BD21B6C902005C8009 /* ImageDownloader.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = CB14B93421B39AA40013A85F;
+			remoteInfo = ImageDownloader;
+		};
+		CB8D02DE21B6C91E005C8009 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB8D02B421B6C8FC005C8009 /* FoundationExtension.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E4A6949E21B1462200F564FD;
+			remoteInfo = FoundationExtension;
+		};
+		CB8D02E021B6C91E005C8009 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB8D02AB21B6C8F6005C8009 /* APIDefinition.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = CBF2A9D521B02A000020D4CD;
+			remoteInfo = APIDefinition;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		CBB053C621B3CBA600BDDC2B /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -49,6 +157,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CB8D02AB21B6C8F6005C8009 /* APIDefinition.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = APIDefinition.xcodeproj; path = APIDefinition/APIDefinition.xcodeproj; sourceTree = "<group>"; };
+		CB8D02B421B6C8FC005C8009 /* FoundationExtension.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FoundationExtension.xcodeproj; path = FoundationExtension/FoundationExtension.xcodeproj; sourceTree = "<group>"; };
+		CB8D02BD21B6C902005C8009 /* ImageDownloader.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ImageDownloader.xcodeproj; path = ImageDownloader/ImageDownloader.xcodeproj; sourceTree = "<group>"; };
+		CB8D02C621B6C90B005C8009 /* Navigator.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Navigator.xcodeproj; path = Navigator/Navigator.xcodeproj; sourceTree = "<group>"; };
+		CB8D02CF21B6C911005C8009 /* UIKitExtension.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = UIKitExtension.xcodeproj; path = UIKitExtension/UIKitExtension.xcodeproj; sourceTree = "<group>"; };
 		CBB0537721B3BE1E00BDDC2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CBB0537921B3BE1E00BDDC2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CBB0537C21B3BE1E00BDDC2B /* API+ServiceFeedsPhotosPublic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "API+ServiceFeedsPhotosPublic.swift"; sourceTree = "<group>"; };
@@ -105,6 +218,63 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CB8D02AA21B6C8E0005C8009 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CB8D02CF21B6C911005C8009 /* UIKitExtension.xcodeproj */,
+				CB8D02C621B6C90B005C8009 /* Navigator.xcodeproj */,
+				CB8D02BD21B6C902005C8009 /* ImageDownloader.xcodeproj */,
+				CB8D02B421B6C8FC005C8009 /* FoundationExtension.xcodeproj */,
+				CB8D02AB21B6C8F6005C8009 /* APIDefinition.xcodeproj */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		CB8D02AC21B6C8F6005C8009 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CB8D02B121B6C8F6005C8009 /* APIDefinition.framework */,
+				CB8D02B321B6C8F6005C8009 /* APIDefinitionTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CB8D02B521B6C8FC005C8009 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CB8D02BA21B6C8FC005C8009 /* FoundationExtension.framework */,
+				CB8D02BC21B6C8FC005C8009 /* FoundationExtensionTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CB8D02BE21B6C902005C8009 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CB8D02C321B6C903005C8009 /* ImageDownloader.framework */,
+				CB8D02C521B6C903005C8009 /* ImageDownloaderTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CB8D02C721B6C90B005C8009 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CB8D02CC21B6C90B005C8009 /* Navigator.framework */,
+				CB8D02CE21B6C90B005C8009 /* NavigatorTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CB8D02D021B6C911005C8009 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CB8D02D521B6C911005C8009 /* UIKitExtension.framework */,
+				CB8D02D721B6C911005C8009 /* UIKitExtensionTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		CBB0537621B3BE1E00BDDC2B /* FlickerPublicPhotosViewer */ = {
 			isa = PBXGroup;
 			children = (
@@ -154,13 +324,6 @@
 				CBB0538421B3BE1E00BDDC2B /* Main.storyboard */,
 			);
 			path = Main;
-			sourceTree = "<group>";
-		};
-		CBB053E021B3CC2500BDDC2B /* Framework */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Framework;
 			sourceTree = "<group>";
 		};
 		CBB053EF21B3D1FA00BDDC2B /* Extension */ = {
@@ -230,7 +393,7 @@
 		G_531F8652EE46C6AF552E8C891BACE54E = {
 			isa = PBXGroup;
 			children = (
-				CBB053E021B3CC2500BDDC2B /* Framework */,
+				CB8D02AA21B6C8E0005C8009 /* Frameworks */,
 				CBB0537621B3BE1E00BDDC2B /* FlickerPublicPhotosViewer */,
 				G_2E1A20FC3BB897F47052AC37A82317D5 /* Frameworks */,
 				G_4850CAC48C5308B1B8E927EAD9FF09FF /* Products */,
@@ -261,6 +424,11 @@
 			buildRules = (
 			);
 			dependencies = (
+				CB8D02D921B6C91E005C8009 /* PBXTargetDependency */,
+				CB8D02DB21B6C91E005C8009 /* PBXTargetDependency */,
+				CB8D02DD21B6C91E005C8009 /* PBXTargetDependency */,
+				CB8D02DF21B6C91E005C8009 /* PBXTargetDependency */,
+				CB8D02E121B6C91E005C8009 /* PBXTargetDependency */,
 			);
 			name = FlickerPublicPhotosViewer;
 			productName = FlickerPublicPhotosViewer;
@@ -285,12 +453,107 @@
 			);
 			mainGroup = G_531F8652EE46C6AF552E8C891BACE54E;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = CB8D02AC21B6C8F6005C8009 /* Products */;
+					ProjectRef = CB8D02AB21B6C8F6005C8009 /* APIDefinition.xcodeproj */;
+				},
+				{
+					ProductGroup = CB8D02B521B6C8FC005C8009 /* Products */;
+					ProjectRef = CB8D02B421B6C8FC005C8009 /* FoundationExtension.xcodeproj */;
+				},
+				{
+					ProductGroup = CB8D02BE21B6C902005C8009 /* Products */;
+					ProjectRef = CB8D02BD21B6C902005C8009 /* ImageDownloader.xcodeproj */;
+				},
+				{
+					ProductGroup = CB8D02C721B6C90B005C8009 /* Products */;
+					ProjectRef = CB8D02C621B6C90B005C8009 /* Navigator.xcodeproj */;
+				},
+				{
+					ProductGroup = CB8D02D021B6C911005C8009 /* Products */;
+					ProjectRef = CB8D02CF21B6C911005C8009 /* UIKitExtension.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				NT_4EB788E1E6ABE31148B6E8884BB86AC6 /* FlickerPublicPhotosViewer */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		CB8D02B121B6C8F6005C8009 /* APIDefinition.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = APIDefinition.framework;
+			remoteRef = CB8D02B021B6C8F6005C8009 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CB8D02B321B6C8F6005C8009 /* APIDefinitionTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = APIDefinitionTests.xctest;
+			remoteRef = CB8D02B221B6C8F6005C8009 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CB8D02BA21B6C8FC005C8009 /* FoundationExtension.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = FoundationExtension.framework;
+			remoteRef = CB8D02B921B6C8FC005C8009 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CB8D02BC21B6C8FC005C8009 /* FoundationExtensionTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = FoundationExtensionTests.xctest;
+			remoteRef = CB8D02BB21B6C8FC005C8009 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CB8D02C321B6C903005C8009 /* ImageDownloader.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ImageDownloader.framework;
+			remoteRef = CB8D02C221B6C903005C8009 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CB8D02C521B6C903005C8009 /* ImageDownloaderTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ImageDownloaderTests.xctest;
+			remoteRef = CB8D02C421B6C903005C8009 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CB8D02CC21B6C90B005C8009 /* Navigator.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Navigator.framework;
+			remoteRef = CB8D02CB21B6C90B005C8009 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CB8D02CE21B6C90B005C8009 /* NavigatorTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = NavigatorTests.xctest;
+			remoteRef = CB8D02CD21B6C90B005C8009 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CB8D02D521B6C911005C8009 /* UIKitExtension.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = UIKitExtension.framework;
+			remoteRef = CB8D02D421B6C911005C8009 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CB8D02D721B6C911005C8009 /* UIKitExtensionTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = UIKitExtensionTests.xctest;
+			remoteRef = CB8D02D621B6C911005C8009 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		SSBP_05B511293BFEEDA895F506977478CF81 /* Carthage */ = {
@@ -347,6 +610,34 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CB8D02D921B6C91E005C8009 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = UIKitExtension;
+			targetProxy = CB8D02D821B6C91E005C8009 /* PBXContainerItemProxy */;
+		};
+		CB8D02DB21B6C91E005C8009 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Navigator;
+			targetProxy = CB8D02DA21B6C91E005C8009 /* PBXContainerItemProxy */;
+		};
+		CB8D02DD21B6C91E005C8009 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ImageDownloader;
+			targetProxy = CB8D02DC21B6C91E005C8009 /* PBXContainerItemProxy */;
+		};
+		CB8D02DF21B6C91E005C8009 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FoundationExtension;
+			targetProxy = CB8D02DE21B6C91E005C8009 /* PBXContainerItemProxy */;
+		};
+		CB8D02E121B6C91E005C8009 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = APIDefinition;
+			targetProxy = CB8D02E021B6C91E005C8009 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		CBB0537821B3BE1E00BDDC2B /* LaunchScreen.storyboard */ = {
