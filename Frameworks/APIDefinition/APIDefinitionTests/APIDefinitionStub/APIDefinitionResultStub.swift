@@ -1,5 +1,5 @@
 //
-//  APIDefinitionStub.swift
+//  APIDefinitionResultStub.swift
 //  APIDefinitionTests
 //
 //  Created by JungMinAhn on 05/12/2018.
@@ -9,29 +9,25 @@
 @testable import APIDefinition
 import Foundation
 
-final class NetworkingHandleStub: NetworkingHandleable {
-    func cancel() {}
-    func resume() {}
-}
-
-final class NetworkingStub: NetworkingProtocol {
-    var request: URLRequest?
+final class ResultStringNetworkingStub: NetworkingProtocol {
     func dataTask(with request: URLRequest, completionBlock: @escaping (Data?, URLResponse?, Error?) -> Void) -> NetworkingHandleable {
-        self.request = request
+        completionBlock("result".data(using: .utf8), nil, nil)
         return NetworkingHandleStub()
     }
 }
 
-struct APIDefinitionStub: APIDefinition {
-    typealias Response = ResponseStub
+struct ResultStringAPIDefinitionStub: APIDefinition {
+    typealias Response = ResultStringResponseStub
     let method: HTTPMethod = .GET
     let path = "/services/feeds/photos_public.gne"
-    let networking: NetworkingProtocol = NetworkingStub()
+    let networking: NetworkingProtocol = ResultStringNetworkingStub()
 }
 
-struct ResponseStub: ResponseDataTypeProtocol {
+struct ResultStringResponseStub: ResponseDataTypeProtocol {
+    let result: String
     init?(data: Data) {
-        guard let result = String(data: data, encoding: .utf8)
+        guard let r = String(data: data, encoding: .utf8)
             else { return nil }
+        self.result = r
     }
 }

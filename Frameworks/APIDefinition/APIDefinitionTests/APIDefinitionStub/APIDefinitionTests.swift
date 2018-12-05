@@ -10,9 +10,9 @@
 import XCTest
 
 final class APIDefinitionTests: XCTestCase {
-    func testFlickerImageList() {
+    func testRequestURL() {
         // given
-        let requestURL = APIDefinitionStub().requestURL
+        let requestURL = getAPIDefinitionURLRequest(apiDefinition: APIDefinitionStub())
         let networking = NetworkingStub()
 
         // when
@@ -27,5 +27,49 @@ final class APIDefinitionTests: XCTestCase {
                        request.url?.absoluteString)
         XCTAssertEqual(networking.request?.httpMethod,
                        request.httpMethod)
+    }
+
+    func testRequest() {
+        // given
+        let apiStub = ResultStringAPIDefinitionStub()
+        let expectation = XCTestExpectation()
+
+        // then
+        apiStub.request { (result) in
+            expectation.fulfill()
+            switch result {
+            case .value(let value):
+                XCTAssertEqual("result", value.result)
+            case .error:
+                XCTFail()
+            }
+        }
+        let _ = XCTWaiter.wait(for: [expectation], timeout: 5)
+    }
+
+    func testEmptyErrorRequest() {
+        // given
+        let apiStub = EmptyErrorAPIDefinitionStub()
+        let expectation = XCTestExpectation()
+
+        // then
+        apiStub.request { (result) in
+            expectation.fulfill()
+            switch result {
+            case .value:
+                XCTFail()
+            case .error(let error) where .데이터없음 == error : break
+            case .error:
+                XCTFail()
+            }
+        }
+        let _ = XCTWaiter.wait(for: [expectation], timeout: 5)
+    }
+
+}
+
+private extension APIDefinitionTests {
+    func getAPIDefinitionURLRequest<T: APIDefinition>(apiDefinition: T) -> URLRequest? where T.Response == ResponseStub {
+        return apiDefinition.requestURL
     }
 }
