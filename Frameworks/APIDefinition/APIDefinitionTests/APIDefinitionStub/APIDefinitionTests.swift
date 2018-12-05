@@ -56,11 +56,9 @@ final class APIDefinitionTests: XCTestCase {
         apiStub.request { (result) in
             expectation.fulfill()
             switch result {
-            case .value:
-                XCTFail()
             case .error(let error) where .데이터없음 == error : break
-            case .error:
-                XCTFail()
+            default: XCTFail()
+
             }
         }
         let _ = XCTWaiter.wait(for: [expectation], timeout: 5)
