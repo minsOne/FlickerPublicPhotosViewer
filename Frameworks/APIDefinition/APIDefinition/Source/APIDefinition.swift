@@ -9,7 +9,7 @@
 import Foundation
 import FoundationExtension
 
-public enum APIDefinitionError: Swift.Error {
+public enum APIDefinitionError: Swift.Error, Equatable {
     case URL생성실패
     case 데이터가져오기실패
     case 네트워크요청에러(NSError)
