@@ -18,8 +18,6 @@ class SliderViewController: UIViewController, StoryboardIdentifiable {
     @IBOutlet private(set) weak var secondImageContainView: UIView!
     @IBOutlet private(set) weak var secondImageView: UIImageView!
     
-    lazy var imageViews: [UIImageView] = [firstImageView, secondImageView]
-    
     typealias State = SliderViewReactor.State
     typealias Action = SliderViewReactor.Action
     
@@ -61,7 +59,6 @@ class SliderViewController: UIViewController, StoryboardIdentifiable {
         guard let reactor = reactor else { return }
 
         reactor.state
-            .debug()
             .map { $0.currentSlider }
             .distinctUntilChanged()
             .subscribe(onNext: { [weak self] in
